@@ -1,9 +1,11 @@
 const express = require("express");
 const controllers = require("../app/controllers");
 const validator = require("../validation")
+
 const apiRouter = express.Router();
 
 apiRouter.post('/login', controllers.api.v1.authController.login)
+apiRouter.post("/api/v1/auth/google", controllers.api.v1.GoogleLoginOrRegister);
 
 apiRouter.post("/api/v1/login", controllers.api.v1.authController.login);
 apiRouter.post("/api/v1/register", controllers.api.v1.authController.register);

@@ -10,4 +10,12 @@ const port = process.env.PORT || 8046;
 
 app.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`)
+  console.log("");
+  console.log(
+    "To get your Google Access Token, go ahead open https://developers.google.com/oauthplayground/"
+  );
+  console.log("1. Choose Google OAuth2 API V2, pick everything in there!");
+  console.log("2. Authorize the API");
+  console.log("3. Get the access token");
+  console.log("4. Send the access token req.body.accessToken");
 })
